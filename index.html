@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aMAZE-ing PASTELular Automata</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>aMAZE-ing PASTELular Automata</h1>
+    <p id="message">Watch the maze generate using cellular automata!</p>
+    
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
+    
+    <div id="ui">
+      <select id="difficultySelect">
+        <option value="easy">Easy (2 enemies)</option>
+        <option value="medium" selected>Medium (4 enemies)</option>
+        <option value="hard">Hard (7 enemies)</option>
+      </select>
+      <button id="newMazeBtn">Generate Maze</button>
+      <button id="audioToggle">🎵 Music</button>
+    </div>
+    
+    <p id="controls" style="display: none;">
+      Arrow Keys or WASD to move • Reach the ★ • Avoid 👾 enemies!
+    </p>
+  </div>
+
+  <div id="unbeatableModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>🌀 Oopsies! 🌀</h2>
+      <p>Sorry - the Cellular Automata didn't vibe with this one...</p>
+      <p><strong>Maze unbeatable.</strong></p>
+      <button id="modalRetryBtn" class="modal-btn">Try Again?</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
